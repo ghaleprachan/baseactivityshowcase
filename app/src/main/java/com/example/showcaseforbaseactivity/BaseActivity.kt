@@ -1,10 +1,10 @@
 package com.example.showcaseforbaseactivity
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : BaseActivity() {
-    override val layoutResId = R.layout.activity_main
-
+abstract class BaseActivity : AppCompatActivity() {
+    abstract val layoutResId: Int
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutResId)
